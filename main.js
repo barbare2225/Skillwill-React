@@ -19,14 +19,6 @@ function calculate2(a,b,operation){
         return false
     } if(typeof b !== "number"){
         return false
-    } if(operation != "+") {
-        return false
-    } if(operation != "-") {
-        return false
-    } if(operation != "*") {
-        return false
-    } if(operation != "/") {
-        return false
     }if(operation == "+") {
         return a+b
     } if(operation == "-") {
@@ -36,9 +28,10 @@ function calculate2(a,b,operation){
     } if(operation == "/") {
         return a/b
     }
-
+    return false
 }
 let c=4543
 let d=true
 const answer=temperature_from_f_to_c(c)
+
 console.log(answer)
