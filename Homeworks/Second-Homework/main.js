@@ -4,7 +4,7 @@ const user1 = [
     {name: 'Lasha', age: 21}, 
     {name: 'Ana', age: 28}
 ]
-function copyUser1(users) {
+function findMin(users) {
     let min = 0
     for ( let i = 1; i < 3; i++) {
         if (users[i].age < users[min].age) {
@@ -13,7 +13,7 @@ function copyUser1(users) {
     }
     return users[min].name
 } 
-// console.log(copyUser1(user1))
+// console.log(findMin(user1))
 
 
 
