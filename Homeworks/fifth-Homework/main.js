@@ -33,5 +33,31 @@ function showQ(question, answers,correctAnswerIndex){
     const answerElements =document.querySelectorAll('.aswer')
     answerElements.forEach((element, index)=>{
         element.textContent=answers[index]
+        element.classList.remove('correct','incorrect')
     })
 }
+
+function checkansw(selectedElement){
+    const answerElements=document.querySelectorAll('.answer')
+    const selectedAnswerIndex = Array.from(answerElements).indexOf(selectedElement)
+    if(selectedAnswerIndex === correctAnswerIndex){
+        selectedElement.classList.add('correct')
+        score++
+    }else{
+        selectedElement.classList.add('incorrect')
+    }
+
+    updateScore()
+}
+
+function updateScore(){
+    const scoreElement =document.getElementById('score')
+    scoreElement.textContent=`score: ${score}`;
+}
+
+// sample
+const question ='What is the capital of Georgia';
+const aswers =['paris', 'new-york', 'Tbilisi' ]
+const correctAnswersIndex = 2
+
+showQ(question,aswers,correctAnswersIndex)
