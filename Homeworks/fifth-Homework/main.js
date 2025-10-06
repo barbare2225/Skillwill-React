@@ -27,17 +27,19 @@ document.body.appendChild(div)
 // 3 //
 let score = 0
 function showQ(question, answers,correctAnswerIndex){
-    const questionElement = document.getElementById(question)
+    const questionElement = document.getElementById('question')
     questionElement.textContent=question
 
-    const answerElements =document.querySelectorAll('.aswer')
+    const answerElements =document.querySelectorAll('.answer')
     answerElements.forEach((element, index)=>{
         element.textContent=answers[index]
         element.classList.remove('correct','incorrect')
+        element.onclick = () => checkansw(element,correctAnswerIndex)
     })
+    
 }
 
-function checkansw(selectedElement){
+function checkansw(selectedElement,correctAnswerIndex){
     const answerElements=document.querySelectorAll('.answer')
     const selectedAnswerIndex = Array.from(answerElements).indexOf(selectedElement)
     if(selectedAnswerIndex === correctAnswerIndex){
