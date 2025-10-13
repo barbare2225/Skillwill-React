@@ -20,7 +20,7 @@ mySetTimeout(2000)
   .catch(error => console.error(error));   
 
 
-// Task 2.1 then/wait //
+// Task 2.1 then/catch //
 function makeToys(time) {
   return mySetTimeout(time)
     .then((message) => console.log("2.1 toys were made in "+message))    
