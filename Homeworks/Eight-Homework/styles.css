@@ -1,0 +1,9 @@
+.post {
+      border: 2px solid pink;
+      padding: 1em;
+      margin-bottom: 3em;
+      border-radius: 1px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+
