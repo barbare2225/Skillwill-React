@@ -49,7 +49,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   // TASK 3
   function deepCopyAsync(obj) {
   return new Promise((resolve, reject) => {
-    if (typeof obj !== 'object' || typeof obj === null) {
+    if (typeof obj !== 'object' || obj === null) {
       return reject("not an object");
     }
 
@@ -76,3 +76,4 @@ deepCopyAsync(human)
 
   human.details.age = 20;
   console.log(human);
+
