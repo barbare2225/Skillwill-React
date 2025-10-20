@@ -1,4 +1,12 @@
 var validator = require('validator');
 
-console.log("test@test.com is mail - "+validator.isEmail('test@test.com'));
-console.log("abcDE123 is mail - "+validator.isEmail('abcDE123'));
+function checkEmail(email) {
+    if(validator.isEmail(email)) {
+        return email + " is a valid email.";
+    } else {
+        return email + " is not a valid email.";
+    }
+}
+
+console.log(checkEmail("test@test.com"));
+console.log(checkEmail("abcDE123"));
